@@ -2,7 +2,7 @@
 
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-// import { reduxForm, reset, change } from 'redux-form'
+import { reduxForm, reset, change } from 'redux-form'
 import Formsy from 'formsy-react'
 import { red100 } from 'material-ui/styles/colors'
 import Paper from 'material-ui/Paper'
@@ -85,11 +85,11 @@ class AuthForm extends Component {
     super(props)
     this.state = {
 // <<<<<<< HEAD
-      // canSubmit: false
+      canSubmit: false
 // =======
-      canSubmit: true,
-      error: null,
-      email: ''
+      // canSubmit: true,
+      // error: null,
+      // email: ''
 // >>>>>>> master
     }
   }

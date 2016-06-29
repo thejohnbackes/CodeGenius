@@ -56,12 +56,10 @@ const validate = values => {
   } else if(values.password.length < 6) {
     errors.password = 'Password is too short'
   }
-  if(signingUp){
-    if(!values.passwordConfirm && values.password) {
-      errors.passwordConfirm = 'Please confirm your password'
-    } else if (values.passwordConfirm !== values.password) {
-      errors.passwordConfirm = 'Passwords do not match'
-    }
+  if(!values.passwordConfirm && values.password) {
+    errors.passwordConfirm = 'Please confirm your password'
+  } else if (values.passwordConfirm !== values.password) {
+    errors.passwordConfirm = 'Passwords do not match'
   }
   return errors
 }
@@ -124,7 +122,7 @@ Form.propTypes = {
 }
 
 export default reduxForm({
-  form: 'form',
+  form: 'form2',
   fields,
   validate
 })(Form)
